@@ -64,7 +64,7 @@ public class ValidationUtils {
     }
 
     // Helper: validasi string tidak null dan tidak kosong
-    private static boolean isValidString(String value) {
+    public static boolean isValidString(String value) {
         return value != null && !value.trim().isEmpty();
     }
 }

@@ -1,6 +1,7 @@
 package com.praktikum.testing.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
@@ -12,6 +13,13 @@ public class Anggota {
     private TipeAnggota tipeAnggota;
     private List<String> idBukuDipinjam;
     private boolean aktif;
+
+    public boolean isBolehPinjamLagi() {
+    }
+
+    public Collection<Object> getBukuDipinjam() {
+        return null;
+    }
 
     public enum TipeAnggota {
         MAHASISWA, DOSEN, UMUM
