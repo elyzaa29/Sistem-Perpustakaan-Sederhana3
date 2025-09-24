@@ -17,7 +17,15 @@
     </properties>
 
     <dependencies>
-        <!-- JUnit 5 -->
+        <!-- JUnit 5 API -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit 5 Engine -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -25,13 +33,10 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JUnit 5 Parameterized Test -->
+        <!-- JUnit 5 Parameterized Tests -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-
-            <artifactId>junit-jupiter-
-                params</artifactId>
-
+            <artifactId>junit-jupiter-params</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
@@ -43,6 +48,7 @@
             <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
+
         <!-- Mockito JUnit Jupiter Integration -->
         <dependency>
             <groupId>org.mockito</groupId>
@@ -51,6 +57,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <!-- Maven Surefire Plugin for running tests -->
