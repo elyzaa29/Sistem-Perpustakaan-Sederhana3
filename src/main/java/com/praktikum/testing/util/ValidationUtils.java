@@ -67,4 +67,10 @@ public class ValidationUtils {
     public static boolean isValidString(String value) {
         return value != null && !value.trim().isEmpty();
     }
+
+    public static boolean isAngkaPositif(double v) {
+    }
+
+    public static boolean isAngkaNonNegatif(double v) {
+    }
 }
