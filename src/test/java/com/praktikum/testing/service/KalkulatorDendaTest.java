@@ -156,4 +156,23 @@ public class KalkulatorDendaTest {
         assertEquals("Denda sedang", kalkulatorDenda.getDeskripsiDenda(25000.0));
         assertEquals("Denda berat", kalkulatorDenda.getDeskripsiDenda(75000.0));
     }
+    public boolean adaDenda(Peminjaman peminjamanTerlambat) {
+        if (peminjamanTerlambat == null) {
+            return false;
+        }
+        return peminjamanTerlambat.isTerlambat();
+    }
+
+    public String getDeskripsiDenda(double v) {
+        if (v <= 0) {
+            return "Tidak ada denda";
+        } else if (v <= 10000) {
+            return "Denda ringan";
+        } else if (v <= 50000) {
+            return "Denda sedang";
+        } else {
+            return "Denda berat";
+        }
+    }
+
 }

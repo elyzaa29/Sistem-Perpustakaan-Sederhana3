@@ -82,7 +82,7 @@ public class ServicePerpustakaan {
         }
 
         // Cek apakah anggota masih bisa pinjam
-        if (anggota.isBolehPinjamLagi()) {
+        if (!anggota.bolehPinjamLagi()) {
             return false;
         }
 
@@ -132,7 +132,10 @@ public class ServicePerpustakaan {
         return false;
     }
 
-    public int getJumlahTersedia(String number) {
-        return 0;
+    public int getJumlahTersedia(String isbn) {
+        return repositoryBuku.cariByIsbn(isbn)
+                .map(Buku::getJumlahTersedia) // ambil jumlah dari objek buku
+                .orElse(0); // kalau gak ketemu, balikin 0
     }
+
 }

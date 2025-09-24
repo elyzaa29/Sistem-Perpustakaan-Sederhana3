@@ -15,10 +15,11 @@ public class Anggota {
     private boolean aktif;
 
     public boolean isBolehPinjamLagi() {
+        return bolehPinjamLagi();
     }
 
-    public Collection<Object> getBukuDipinjam() {
-        return null;
+    public Collection<String> getBukuDipinjam() {
+        return idBukuDipinjam;
     }
 
     public enum TipeAnggota {

@@ -68,9 +68,14 @@ public class ValidationUtils {
         return value != null && !value.trim().isEmpty();
     }
 
+    // Angka positif = lebih besar dari 0
     public static boolean isAngkaPositif(double v) {
+        return v > 0;
     }
 
+    // Angka non-negatif = lebih besar atau sama dengan 0
     public static boolean isAngkaNonNegatif(double v) {
+        return v >= 0;
     }
+
 }
